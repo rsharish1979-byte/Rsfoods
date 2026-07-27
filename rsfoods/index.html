@@ -404,30 +404,71 @@
          </div>
       </section>
       <section id="special">
-         <div class="spbg"></div>
-         <div class="container" style="position:relative;z-index:2;">
-            <div class="row align-items-center g-5">
-               <div class="col-lg-6" data-aos="fade-right">
-                  <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
-                  <h2 class="sptitle">Get 30% Off<br/>Our Signature<br/><span>Burger</span> Meal</h2>
-                  <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with loaded fries and a premium shake at an unbeatable price.</p>
-                  <div class="cdwrap">
-                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Hours</span></div>
-                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
-                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
-                  </div>
-                  <a href="#menu" class="btn-red"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
-               </div>
-               <div class="col-lg-6" data-aos="fade-left">
-                  <div class="spimgw">
-                     <div class="spglow"></div>
-                     <div class="sppbdg"><span class="old">₹249</span><span class="np">₹174</span></div>
-                     <img src="img/off-img.jpg" alt="Special Burger"/>
-                  </div>
-               </div>
+    <div class="spbg"></div>
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="sptag">
+                    <i class="fas fa-bolt me-1"></i>Limited Time Offer
+                </div>
+                <h2 class="sptitle">
+                    Get 30% Off<br>
+                    Our Signature<br>
+                    <span>Burger</span> Meal
+                </h2>
+                <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with loaded fries and a premium shake at an unbeatable price.</p>
+                <div class="cdwrap">
+                    <div class="cditem">
+                        <span class="cdnum" id="cdH">08</span>
+                        <span class="cdlbl">Hours</span>
+                    </div>
+                    <div class="cditem">
+                        <span class="cdnum" id="cdM">35</span>
+                        <span class="cdlbl">Minutes</span>
+                    </div>
+                    <div class="cditem">
+                        <span class="cdnum" id="cdS">30</span>
+                        <span class="cdlbl">Seconds</span>
+                    </div>
+                </div>
+                <a href="#menu" class="btn-red">
+                    <i class="fas fa-shopping-cart"></i>Grab the Deal
+                </a>
             </div>
-         </div>
-      </section>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="spimgw">
+                    <div class="spglow"></div>
+                    <div class="sppbdg">
+                        <span class="old">₹249</span>
+                        <span class="np">₹174</span>
+                    </div>
+                    <img src="img/off-img.jpg" alt="Special Burger">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+      let totalSeconds = (8 * 60 * 60) + (35 * 60) + 30;
+    function updateCountdown() {
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        document.getElementById("cdH").textContent = String(hours).padStart(2, "0");
+        document.getElementById("cdM").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("cdS").textContent = String(seconds).padStart(2, "0");
+
+        if (totalSeconds > 0) {
+            totalSeconds--;
+        } else {
+            clearInterval(timer);
+        }
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+</script>
       <section id="gallery">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
