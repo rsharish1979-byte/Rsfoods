@@ -21,7 +21,6 @@ window.addEventListener('scroll', function() {
     });
 });
 
-/*  SMOOTH SCROLL + MOBILE NAV CLOSE  */
 document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
         var href = this.getAttribute('href');
